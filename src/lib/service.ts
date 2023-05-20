@@ -50,10 +50,8 @@ export class SpotifyService {
                 headers: {
                     'Authorization': 'Bearer ' + this.accessToken
                 },
-                cache: 'no-cache',
+                cache: 'no-store'
             }).then((res) => res.json())
-
-            console.log(response)
 
             return Track.parseTrack(response)
         } catch {

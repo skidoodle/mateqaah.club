@@ -5,17 +5,8 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 const pageProperties = {
-  twitter: {
-    images: [
-      {
-        url: '/preview.png',
-        width: 800,
-        height: 600
-      }
-    ]
-  },
   title: 'mateqaah',
-  description: 'mateqaah - An 18-year-old full stack developer XD',
+  description: 'mateqaah - An 18-year-old full stack developer',
   viewport: {
     width: 'device-width',
     initialScale: 1,
@@ -30,6 +21,11 @@ const pageProperties = {
 export default function ({ children }: { children: React.ReactNode }) {
   return (
     <html lang='zxx'>
+      <head>
+        <meta property='og:image' content='/preview.png' />
+        <meta property='twitter:image' content='/preview.png' />
+        <meta property='twitter:card' content='summary_large_image' />
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   )

@@ -1,12 +1,11 @@
 'use client'
 
-import { Spotify } from '@/app/components/Spotify'
-import { Icon, IconData } from '@/app/components/Icon'
-
 import useSWR from 'swr'
 import FadeIn from 'react-fade-in'
 
 import { Toaster } from 'react-hot-toast'
+import { Spotify } from '@/app/components/Spotify'
+import { Icon, IconData } from '@/app/components/Icon'
 import {
   FaDiscord,
   FaGithub,

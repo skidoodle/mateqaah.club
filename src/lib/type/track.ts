@@ -1,6 +1,6 @@
 import { Mapper } from '@/lib/type/mapper'
 
-type TrackType = {
+export type TrackType = {
     progress: number
     album: {
         name: string
@@ -18,7 +18,7 @@ type TrackType = {
 }
 
 export class Track implements Mapper<TrackType> {
-    
+
     public static parseTrack(result: any): Track {
         const { item } = result
 
