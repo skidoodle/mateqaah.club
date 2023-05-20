@@ -3,15 +3,15 @@ import { NextResponse } from 'next/server'
 
 const { CLIENT_ID, CLIENT_SECRET, REFRESH_TOKEN }: any = process.env
 
-const spotify = new SpotifyService(CLIENT_ID, CLIENT_SECRET, REFRESH_TOKEN);
+const spotify = new SpotifyService(CLIENT_ID, CLIENT_SECRET, REFRESH_TOKEN)
  
-export async function GET(request: Request) {
+export async function GET() {
     const song: any = await spotify.getCurrentTrack()
 
-    if(song.isPlaying === undefined) {
+    if(song === undefined) {
         return NextResponse.json({ nowplaying: false })
     }
-
+    
     return NextResponse.json({
         nowplaying: true,
         track: {
