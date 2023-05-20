@@ -53,6 +53,8 @@ export class SpotifyService {
                 cache: 'no-cache',
             }).then((res) => res.json())
 
+            console.log(response)
+
             return Track.parseTrack(response)
         } catch {
             return await this.getAccessToken() as any
