@@ -5,7 +5,7 @@ const { CLIENT_ID, CLIENT_SECRET, REFRESH_TOKEN }: any = process.env
 
 const spotify = new SpotifyService(CLIENT_ID, CLIENT_SECRET, REFRESH_TOKEN);
  
-export async function GET() {
+export async function GET(request: Request) {
     const song: any = await spotify.getCurrentTrack()
 
     if(song.isPlaying === undefined) {
