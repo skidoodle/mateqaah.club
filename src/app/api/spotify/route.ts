@@ -8,7 +8,7 @@ const spotify = new SpotifyService(CLIENT_ID, CLIENT_SECRET, REFRESH_TOKEN)
 export async function GET() {
     const song: any = await spotify.getCurrentTrack()
 
-    if(!song || !song.isPlaying) {
+    if(!song.isPlaying) {
         return NextResponse.json({ nowplaying: false })
     }
     
