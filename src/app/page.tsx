@@ -34,8 +34,7 @@ export default function () {
           </h1>
           <p className='text-[#a3a3a3] font-bold text-lg sm:text-xl max-w-4xl mb-4'>
             I'm a 18-year-old high school student from Hungary, currently
-            studying <span className='italic text-gray-200'>szak neve</span> at
-            the <span className='italic text-gray-200'>egyetem helye</span>
+            studying <span className='italic text-gray-200'>-</span> <span className='italic text-gray-200'>-</span>
           </p>
 
           <div className='flex flex-wrap flex-row gap-5 text-4xl'>
