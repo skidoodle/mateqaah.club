@@ -23,34 +23,34 @@ const kimasolKartya = () => {
     style: {
       background: '#0f1012',
       color: '#fff',
-      fontSize: '1em'
-    }
+      fontSize: '1em',
+    },
   })
 }
 
 export const Icon = ({ icon, referencia, kimasolas = false }: IconProps) => {
   return (
-    <span className='relative group'>
+    <span className="relative group">
       {kimasolas ? (
         <span
           onClick={() => {
             kimasolKartya(), copy(referencia)
           }}
           style={{ color: icon.color }}
-          className='cursor-pointer hover:opacity-75'
+          className="cursor-pointer hover:opacity-75"
         >
           {React.createElement(icon.icon)}
         </span>
       ) : (
-        <Link href={referencia} target='_blank'>
-          <span style={{ color: icon.color }} className='hover:opacity-75'>
+        <Link href={referencia} target="_blank">
+          <span style={{ color: icon.color }} className="hover:opacity-75">
             {React.createElement(icon.icon)}
           </span>
         </Link>
       )}
 
-      <div className='tooltip absolute bottom-10 shadow-dark -left-1 group-hover:block hidden p-2 bg-[#404040] text-white rounded-lg font-bold'>
-        <p className='select-none leading-none text-sm'>{icon.hover}</p>
+      <div className="tooltip absolute bottom-10 shadow-dark -left-1 group-hover:block hidden p-2 bg-[#404040] text-white rounded-lg font-bold">
+        <p className="select-none leading-none text-sm">{icon.hover}</p>
       </div>
     </span>
   )

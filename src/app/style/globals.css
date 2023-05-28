@@ -2,33 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {    
-    body {
-        background-color: rgb(23 23 23);
-    }
+@layer base {
+  body {
+    background-color: rgb(23 23 23);
+  }
 
-    ::-webkit-scrollbar {
-        width: 13px;
-    }
-    ::-webkit-scrollbar-thumb {
-        background: #6d28d9;
-        border-radius: 9999px;
-        border: 0.25rem solid transparent;
-        background-clip: padding-box;
-    }
-    ::-webkit-scrollbar-track {
-        background: 0 0;
-    }
+  ::-webkit-scrollbar {
+    width: 13px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #6d28d9;
+    border-radius: 9999px;
+    border: 0.25rem solid transparent;
+    background-clip: padding-box;
+  }
+  ::-webkit-scrollbar-track {
+    background: 0 0;
+  }
 }
 
 @layer utilities {
-    .tooltip:after {
-        content: " ";
-        position: absolute;
-        top: 100%;
-        left: 1.325rem;
-        margin-left: -0.425rem;
-        border: 0.425rem solid transparent;
-        border-top-color: #404040;
-    }
+  .tooltip:after {
+    content: ' ';
+    position: absolute;
+    top: 100%;
+    left: 1.325rem;
+    margin-left: -0.425rem;
+    border: 0.425rem solid transparent;
+    border-top-color: #404040;
+  }
 }

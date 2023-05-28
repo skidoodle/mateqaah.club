@@ -10,21 +10,21 @@ const pageProperties = {
   viewport: {
     width: 'device-width',
     initialScale: 1,
-    maximumScale: 1
+    maximumScale: 1,
   },
   icons: {
-    icon: '/favicon.ico'
+    icon: '/favicon.ico',
   },
-  themeColor: '#6d28d9'
+  themeColor: '#6d28d9',
 }
 
 export default function ({ children }: { children: React.ReactNode }) {
   return (
-    <html lang='zxx'>
+    <html lang="zxx">
       <head>
-        <meta property='og:image' content='/preview.png' />
-        <meta property='twitter:image' content='/preview.png' />
-        <meta property='twitter:card' content='summary_large_image' />
+        <meta property="og:image" content="/preview.png" />
+        <meta property="twitter:image" content="/preview.png" />
+        <meta property="twitter:card" content="summary_large_image" />
       </head>
       <body className={inter.className}>{children}</body>
     </html>
